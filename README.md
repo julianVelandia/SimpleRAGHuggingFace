@@ -19,7 +19,8 @@ During the first execution, the dataset is loaded, vectorized, and embeddings ar
 ```python
 from rag import Rag
 
-rag = Rag() # Default Dataset
+RAG_HF_DATASET = "JulianVelandia/unal-repository-dataset-alternative-format"
+rag = Rag(hf_dataset=RAG_HF_DATASET)
 query = "What is the lighting design, control, and beautification of the field at Alfonso López Stadium?"
 response = rag.retrieval_augmented_generation(query)
 print(response)
